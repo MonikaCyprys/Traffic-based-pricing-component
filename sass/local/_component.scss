@@ -1,4 +1,10 @@
 .container {
   display: flex;
-  background-color: yellowgreen;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .title {
+    flex-basis: 100%;
+    text-align: center;
+  }
 }

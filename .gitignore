@@ -16,3 +16,7 @@
 .prettierignore
 
 /design
+README.md
+
+# styles
+*.css.map
