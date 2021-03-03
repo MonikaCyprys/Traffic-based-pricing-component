@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .title {
+    flex-basis: 100%;
+    text-align: center;
+    background-color: gold;
+  }
+}

@@ -1,25 +1,38 @@
+:root {
+  --softCyan: hsl(174, 77%, 80%);
+  --strongCyan: hsl(174, 86%, 45%);
+  --lightGrayishRed: hsl(14, 92%, 95%);
+  --lightRed: hsl(15, 100%, 70%);
+  --paleBlue: hsl(226, 100%, 87%);
+  --white: hsl(0, 0%, 100%);
+  --veryPale: hsl(230, 100%, 99%);
+  --lightGrayishBlue: hsl(224, 65%, 95%);
+  --lightGrayishBlueToggle: hsl(223, 50%, 87%);
+  --grayishBlue: hsl(225, 20%, 60%);
+  --darkDesaturatedBlue: hsl(227, 35%, 25%); }
+
+:root {
+  --mobile: 375px;
+  --desktop: 1440px; }
+
 * {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background-color: blue;
-}
+  box-sizing: border-box; }
+
+body {
+  font-size: 15px;
+  font-family: "Manrope", sans-serif;
+  display: flex;
+  justify-content: center; }
 
 .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
+  flex-wrap: wrap;
+  justify-content: center; }
+  .container .title {
+    flex-basis: 100%;
+    text-align: center;
+    background-color: gold; }
 
-.container .title {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  text-align: center;
-}
 /*# sourceMappingURL=app.css.map */

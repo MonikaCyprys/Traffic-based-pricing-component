@@ -1,0 +1,17 @@
+@import "colors";
+@import "devices";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px; //Introductory Paragraph
+  font-family: "Manrope", sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+@import "component";
