@@ -24,10 +24,35 @@
     <main class="container">
       <article class="trial-info">
         <h1 class="title">Simple, traffic-based pricing</h1>
-        <p>Sign-up for free 30-day trial.</p>
-        <p>No cedit card required.</p>
+        <p class="trial-details">Sign-up for free 30-day trial.</p>
+        <p class="trial-details">No cedit card required.</p>
       </article>
-      <section class="payment-details"></section>
+      <section class="payment-details">
+        <p class="pageviews">100K pageviews</p>
+        <input type="range" name="slider" id="slider-bar" />
+        <p class="price">
+          <span class="bill">$16.00 </span>
+          / month
+        </p>
+        <div class="payment-choice">
+          <p class="type">Monthly Billing</p>
+          <div class="toggle"><span class="thumb"></span></div>
+          <p class="type">Yearly Billing</p>
+          <p class="discount">-25%</p>
+        </div>
+        <div class="payment-results">
+          <p class="results">
+            <span class="fas fa-check"></span> Unlimited websites
+          </p>
+          <p class="results">
+            <span class="fas fa-check"></span> 100% data ownership
+          </p>
+          <p class="results">
+            <span class="fas fa-check"></span> Email reports
+          </p>
+          <button class="buy">Start my trial</button>
+        </div>
+      </section>
     </main>
     <!-- Pageviews
   $ /month
@@ -45,5 +70,9 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
+    <script
+      src="https://kit.fontawesome.com/c2672b97d2.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

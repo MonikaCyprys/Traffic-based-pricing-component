@@ -5,11 +5,11 @@
   --lightRed: hsl(15, 100%, 70%);
   --paleBlue: hsl(226, 100%, 87%);
   --white: hsl(0, 0%, 100%);
-  --veryPale: hsl(230, 100%, 99%);
-  --lightGrayishBlue: hsl(224, 65%, 95%);
-  --lightGrayishBlueToggle: hsl(223, 50%, 87%);
+  --veryPale: hsl(222, 87%, 97%);
+  --lightGrayishBlue: hsl(226, 68%, 95%);
+  --lightGrayishBlueToggle: hsl(222, 49%, 87%);
   --grayishBlue: hsl(225, 20%, 60%);
-  --darkDesaturatedBlue: hsl(227, 35%, 25%);
+  --darkDesaturatedBlue: #293356;
 }
 
 :root {
@@ -41,7 +41,7 @@ body {
 body::after {
   content: "";
   display: block;
-  background-color: var(--lightGrayishBlue);
+  background-color: var(--veryPale);
   position: absolute;
   z-index: -1;
   width: 100%;
@@ -55,9 +55,13 @@ main.container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
   -ms-flex-preferred-size: 450px;
       flex-basis: 450px;
 }
@@ -75,6 +79,7 @@ main.container .trial-info {
       align-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-bottom: 30px;
   height: 200px;
   padding: 20px 10px;
   position: relative;
@@ -92,6 +97,7 @@ main.container .trial-info::before {
           transform: translate(-50%, -40%);
   border-radius: 50%;
   border: 1px solid var(--grayishBlue);
+  opacity: 0.4;
 }
 
 main.container .trial-info::after {
@@ -103,6 +109,7 @@ main.container .trial-info::after {
   height: 90px;
   border-radius: 50%;
   border: 1px solid var(--grayishBlue);
+  opacity: 0.4;
 }
 
 main.container .trial-info .title {
@@ -111,8 +118,222 @@ main.container .trial-info .title {
   padding: 10px 0;
 }
 
-main.container .trial-info p {
+main.container .trial-info p.trial-details {
   color: var(--grayishBlue);
-  padding: 5px;
+  padding: 3px;
+}
+
+main.container .payment-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: 86%;
+      flex-basis: 86%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-height: -webkit-max-content;
+  min-height: -moz-max-content;
+  min-height: max-content;
+  padding: 20px;
+  position: relative;
+  background-color: var(--white);
+  border-radius: 8px;
+  -webkit-box-shadow: 0 1px 12px 2px #dce3f7;
+          box-shadow: 0 1px 12px 2px #dce3f7;
+  /* Moz */
+  /* IE*/
+}
+
+main.container .payment-details .pageviews {
+  color: var(--grayishBlue);
+  padding: 10px 10px 30px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: smaller;
+  font-weight: bold;
+}
+
+main.container .payment-details input[type="range"] {
+  -webkit-appearance: none;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  margin: 30px 0;
+}
+
+main.container .payment-details input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 40px;
+  height: 40px;
+  margin: -18px;
+  background: var(--strongCyan);
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+main.container .payment-details input[type="range"]:focus::-webkit-slider-thumb {
+  -webkit-box-shadow: 0 10px 30px 0 var(--strongCyan);
+          box-shadow: 0 10px 30px 0 var(--strongCyan);
+}
+
+main.container .payment-details input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  background: var(--softCyan);
+  border-radius: 10px;
+  border: none;
+}
+
+main.container .payment-details input[type="range"]::-moz-range-thumb {
+  width: 40px;
+  height: 40px;
+  background: var(--strongCyan);
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+main.container .payment-details input[type="range"]::-moz-range-progress {
+  background-color: var(--softCyan);
+  height: 50%;
+  border-radius: 50%;
+  border: none;
+}
+
+main.container .payment-details input[type="range"]::-moz-range-track {
+  background-color: var(--veryPale);
+  border: none;
+  height: 100%;
+}
+
+main.container .payment-details input[type="range"]::-ms-fill-lower {
+  background-color: var(--softCyan);
+  height: 100%;
+  border-radius: 50%;
+  border: none;
+}
+
+main.container .payment-details input[type="range"]::-ms-fill-upper {
+  background-color: var(--veryPale);
+  border-radius: 50%;
+  border: none;
+  height: 100%;
+}
+
+main.container .payment-details p.price {
+  text-align: center;
+  color: var(--grayishBlue);
+  padding: 20px 10px;
+}
+
+main.container .payment-details p.price .bill {
+  font-size: xx-large;
+  color: var(--darkDesaturatedBlue);
+  vertical-align: -12%;
+  font-weight: bold;
+}
+
+main.container .payment-details .payment-choice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+main.container .payment-details .payment-choice .type {
+  color: var(--grayishBlue);
+  font-size: smaller;
+}
+
+main.container .payment-details .payment-choice .toggle {
+  width: 40px;
+  height: 20px;
+  border-radius: 30px;
+  background-color: var(--lightGrayishBlueToggle);
+  margin: 0 10px;
+  padding: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+main.container .payment-details .payment-choice .toggle .thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--white);
+  display: block;
+}
+
+main.container .payment-details .payment-choice .toggle.active {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background-color: var(--strongCyan);
+}
+
+main.container .payment-details .payment-choice .discount {
+  color: var(--lightRed);
+  background-color: var(--lightGrayishRed);
+  border-radius: 10px;
+  padding: 0 7px;
+  font-size: x-small;
+  line-height: 2;
+  margin-left: 7px;
+}
+
+main.container .payment-details .payment-results {
+  width: 100%;
+  border-top: 0.5px solid var(--lightGrayishBlue);
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px 10px;
+}
+
+main.container .payment-details .payment-results .results {
+  text-align: center;
+  font-size: smaller;
+  color: var(--grayishBlue);
+  padding: 5px 10px;
+  font-weight: bold;
+}
+
+main.container .payment-details .payment-results .results .fa-check {
+  margin-right: 10px;
+  color: var(--strongCyan);
+}
+
+main.container .payment-details .payment-results .buy {
+  background-color: var(--darkDesaturatedBlue);
+  width: 160px;
+  padding: 10px 30px;
+  color: var(--paleBlue);
+  margin: 20px auto 0 auto;
+  border-radius: 25px;
+  font-weight: bold;
+  font-family: inherit;
 }
 /*# sourceMappingURL=app.css.map */

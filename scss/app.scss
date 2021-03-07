@@ -18,13 +18,13 @@ body {
   &::after {
     content: "";
     display: block;
-    background-color: var(--lightGrayishBlue);
+    background-color: var(--veryPale);
     position: absolute;
     z-index: -1;
     width: 100%;
     height: 50%;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     // border-bottom-right-radius: 50%;
     border-bottom-left-radius: 35%;
   }
