@@ -28,8 +28,17 @@
         <p class="trial-details">No cedit card required.</p>
       </article>
       <section class="payment-details">
-        <p class="pageviews">100K pageviews</p>
-        <input type="range" name="slider" id="slider-bar" />
+        <p class="pageviews">
+          <span class="numberOfPageviews">100</span>K pageviews
+        </p>
+        <input
+          type="range"
+          min="20"
+          max="500"
+          value=""
+          name="slider"
+          id="slider-bar"
+        />
         <p class="price">
           <span class="bill">$16.00 </span>
           / month
@@ -54,17 +63,6 @@
         </div>
       </section>
     </main>
-    <!-- Pageviews
-  $ /month
-
-  Monthly Billing
-  Yearly Billing 25% discount
-
-  Unlimited websites
-  100% data ownership
-  Email reports
-
-  Start my trial -->
     <!-- 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
@@ -74,5 +72,6 @@
       src="https://kit.fontawesome.com/c2672b97d2.js"
       crossorigin="anonymous"
     ></script>
+    <script src="app.js"></script>
   </body>
 </html>

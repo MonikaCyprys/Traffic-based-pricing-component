@@ -83,10 +83,22 @@ main.container {
       appearance: none;
       width: 40px;
       height: 40px;
-      margin: -18px;
+      margin: -16px;
       background: var(--strongCyan);
       cursor: pointer;
       border-radius: 50%;
+      position: relative;
+      // &::after {
+      //   font-family: "Font Awesome 5 Free";
+      //   content: "\f337";
+      //   display: inline-block;
+      //   position: absolute;
+      //   top: 0;
+      //   left:0;
+      //   z-index: 99;
+      //   padding-right: 3px;
+      //   vertical-align: middle;
+      // }
     }
     input[type="range"]:focus::-webkit-slider-thumb {
       box-shadow: 0 10px 30px 0 var(--strongCyan);
