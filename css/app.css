@@ -167,7 +167,7 @@ main.container .payment-details input[type="range"] {
   border: none;
   outline: none;
   border-radius: 50%;
-  margin: 30px 0;
+  margin: 50px 0;
 }
 
 main.container .payment-details input[type="range"]::-webkit-slider-thumb {
@@ -234,7 +234,7 @@ main.container .payment-details input[type="range"]::-ms-fill-upper {
 main.container .payment-details p.price {
   text-align: center;
   color: var(--grayishBlue);
-  padding: 20px 10px;
+  padding: 10px 10px 0 10px;
 }
 
 main.container .payment-details p.price .bill {
@@ -244,13 +244,24 @@ main.container .payment-details p.price .bill {
   font-weight: bold;
 }
 
+main.container .payment-details p.yearPrice {
+  visibility: hidden;
+}
+
+main.container .payment-details p.yearPrice.active {
+  visibility: visible;
+}
+
 main.container .payment-details .payment-choice {
+  margin-top: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
 }
 
 main.container .payment-details .payment-choice .type {
