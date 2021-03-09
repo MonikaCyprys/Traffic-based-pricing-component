@@ -15,7 +15,7 @@
   };
   let yearlyChoice = false;
   let total = 10;
-  
+
   function calculateYearlyPrice() {
     yearlyChoice = true;
     if (yearlyChoice) {
@@ -31,9 +31,9 @@
     for (let price in prices) {
       if (this.value == price) {
         total = prices[price];
-        if (!yearlyChoice) {
-          bill.textContent = prices[price].toFixed(2);
-        } else calculateYearlyPrice();
+        !yearlyChoice
+          ? (bill.textContent = prices[price].toFixed(2))
+          : calculateYearlyPrice();
       }
     }
   }
