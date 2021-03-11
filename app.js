@@ -1,6 +1,6 @@
 (function () {
   const thumbValue = document.querySelector("#slider-bar");
-  const amountPageviews = document.querySelector(".numberOfPageviews");
+  const numberOfPageviews = document.querySelector(".numberOfPageviews");
   const toggle = document.querySelector(".toggle");
   const bill = document.querySelector(".bill");
   const billForYear = document.querySelector(".billForYear");
@@ -19,20 +19,20 @@
   function calculateYearlyPrice() {
     yearlyChoice = true;
     if (yearlyChoice) {
-      const allYearPrice = total * 12;
-      const discount = allYearPrice / 4;
-      billForYear.textContent = (allYearPrice - discount).toFixed(2);
-      bill.textContent = ((allYearPrice - discount) / 12).toFixed(2);
+      const totalPrice = total * 12;
+      const discount = totalPrice / 4;
+      billForYear.textContent = `$ ${(totalPrice - discount).toFixed(2)}`;
+      bill.textContent = `$ ${((totalPrice - discount) / 12).toFixed(2)}`;
     }
   }
 
   function calculateBill() {
-    amountPageviews.textContent = this.value;
+    numberOfPageviews.textContent = this.value;
     for (let price in prices) {
       if (this.value == price) {
         total = prices[price];
         !yearlyChoice
-          ? (bill.textContent = prices[price].toFixed(2))
+          ? (bill.textContent = `$ ${prices[price].toFixed(2)}`)
           : calculateYearlyPrice();
       }
     }
@@ -42,7 +42,7 @@
       yearPrice.classList.remove("active");
       toggle.classList.remove("active");
       yearlyChoice = false;
-      bill.textContent = total.toFixed(2);
+      bill.textContent = `$ ${total.toFixed(2)}`;
     } else {
       yearPrice.classList.add("active");
       toggle.classList.add("active");
