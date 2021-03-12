@@ -8,9 +8,10 @@
 }
 
 body {
-  font-size: 15px; //Introductory Paragraph
+  font-size: 15px;
   font-family: "Manrope", sans-serif;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   position: relative;
   width: 100%;
@@ -28,5 +29,4 @@ body {
     border-bottom-left-radius: 35%;
   }
 }
-
 @import "component";

@@ -1,10 +1,14 @@
+@import "media-queries";
+
 main.container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-content: flex-start;
   flex-basis: 450px;
-
+  @include desktop-view {
+    flex-basis: 600px;
+  }
   .trial-info {
     display: flex;
     flex-basis: 100%;
@@ -62,7 +66,11 @@ main.container {
     background-color: var(--white);
     border-radius: 8px;
     box-shadow: 0 1px 12px 2px rgb(220, 227, 247);
-
+    @include desktop-view {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
     .pageviews {
       color: var(--grayishBlue);
       padding: 10px 10px 30px 10px;
@@ -71,6 +79,12 @@ main.container {
       letter-spacing: 1px;
       font-size: medium;
       font-weight: bold;
+      @include desktop-view {
+        order: -1;
+        padding: 25px 10px;
+        margin-left: 0;
+        margin-right: auto;
+      }
     }
     input[type="range"] {
       -webkit-appearance: none;
@@ -82,6 +96,9 @@ main.container {
       margin: 50px auto;
       width: 100%;
       padding: 0 10px;
+      @include desktop-view {
+        margin: 35px auto 20px auto;
+      }
     }
     input[type="range"]::-webkit-slider-thumb {
       -webkit-appearance: none;
@@ -93,7 +110,6 @@ main.container {
       cursor: pointer;
       position: relative;
       border-radius: 50%;
-      content: "OK";
     }
     input[type="range"]::-webkit-slider-thumb::before {
       display: inline-block;
@@ -163,6 +179,10 @@ main.container {
       text-align: center;
       color: var(--grayishBlue);
       padding: 10px 10px 0 10px;
+      @include desktop-view {
+        order: -1;
+        flex-basis: 45%;
+      }
       .bill {
         font-size: xx-large;
         color: var(--darkDesaturatedBlue);
@@ -172,6 +192,9 @@ main.container {
     }
     p.yearPrice {
       visibility: hidden;
+      @include desktop-view {
+        transform: translateY(-20px);
+      }
       &.active {
         visibility: visible;
       }
@@ -217,7 +240,7 @@ main.container {
         font-size: x-small;
         line-height: 2;
         margin-left: 7px;
-        margin-right: 15px;
+        margin-right: 7px;
       }
     }
     .payment-results {
@@ -230,6 +253,9 @@ main.container {
       padding: 20px 10px;
       .results {
         flex-basis: 100%;
+        @include desktop-view {
+          flex-basis: 50%;
+        }
         .result {
           text-align: center;
           font-size: smaller;
@@ -237,6 +263,9 @@ main.container {
           padding: 5px 10px;
           font-weight: bold;
           flex-basis: 100%;
+          @include desktop-view {
+            text-align: left;
+          }
           .fa-check {
             margin-right: 10px;
             color: var(--strongCyan);
@@ -254,48 +283,17 @@ main.container {
         font-weight: bold;
         font-family: inherit;
         cursor: pointer;
-      }
-    }
-    @media screen and (min-width: 1440px) {
-      P.pageviews {
-        order: -1;
-        padding: 25px 10px;
-        margin-left: 0;
-        margin-right: auto;
-      }
-      p.price {
-        order: -1;
-        flex-basis: 45%;
-      }
-      p.yearPrice {
-        transform: translateY(-20px);
-      }
-      input[type="range"] {
-        margin: 35px auto 20px auto;
-      }
-    }
-  }
-  @media screen and (min-width: 1440px) {
-    .payment-details {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      .payment-results {
-        .results {
-          flex-basis: 50%;
-          .result {
-            text-align: left;
-          }
-        }
-        .buy {
+        @include desktop-view {
           margin: auto;
         }
       }
     }
   }
 }
-@media screen and (min-width: 1440px) {
-  main.container {
-    flex-basis: 600px;
-  }
+footer {
+  flex-basis: 100%;
+  text-align: center;
+  margin: 80px auto 50px auto;
+  padding: 20px 0;
+  font-size: smaller;
 }
