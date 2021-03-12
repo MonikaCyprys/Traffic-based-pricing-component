@@ -5,6 +5,13 @@
   const bill = document.querySelector(".bill");
   const billForYear = document.querySelector(".billForYear");
   const yearPrice = document.querySelector(".yearPrice");
+
+  const discount = document.querySelector(".discount");
+  const screenWidth = window.innerWidth;
+  if (screenWidth > 1440) {
+    discount.textContent = "-25% discount";
+  }
+
   const prices = {
     50: 5,
     100: 10,

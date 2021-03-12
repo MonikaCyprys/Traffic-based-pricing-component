@@ -12,11 +12,6 @@
   --darkDesaturatedBlue: #293356;
 }
 
-:root {
-  --mobile: 375px;
-  --desktop: 1440px;
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -223,25 +218,7 @@ main.container .payment-details input[type="range"]::-webkit-slider-thumb {
   margin: -16px;
   background-color: var(--strongCyan);
   cursor: pointer;
-  position: relative;
   border-radius: 50%;
-}
-
-main.container .payment-details input[type="range"]::-webkit-slider-thumb::before {
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f337";
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 99;
-  padding-right: 3px;
-  vertical-align: middle;
 }
 
 main.container .payment-details input[type="range"]:focus::-webkit-slider-thumb {
